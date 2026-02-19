@@ -42,5 +42,4 @@ public class Main {
 
 		miAgenda.listarContactos();
 	}
-
 }
