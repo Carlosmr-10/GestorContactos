@@ -19,24 +19,27 @@ public class Agenda {
 
 		for (int i = 0; i < listaContactos.size(); i++) {
 			
-			if (nombre.equalsIgnoreCase(listaContactos.get(i).getNombre)) {
+			if (nombre.equalsIgnoreCase(listaContactos.get(i).getNombre())) {
 				
 				listaContactos.remove(i);
 			}
 		}
 	}
 
-	private boolean buscarContactos(String nombre) {
+	private String buscarContactos(String nombre) {
 
 		boolean existe = false;
 
 		for (int i = 0; i < listaContactos.size(); i++) {
 			
-			if (nombre.equalsIgnoreCase(listaContactos.get(i).getNombre)) {
+			if (nombre.equalsIgnoreCase(listaContactos.get(i).getNombre())) {
 				
 				existe = true;
 				System.out.println("Contacto encontrado");
-				return listaContactos.get(i);
+				if (existe) {
+
+					nombre = listaContactos.get(i).toString();
+				}
 			}
 			else {
 			
@@ -44,7 +47,7 @@ public class Agenda {
 			}
 		}
 		
-		return existe;
+		return nombre;
 	}
 	
 	public void listarContactos() {
