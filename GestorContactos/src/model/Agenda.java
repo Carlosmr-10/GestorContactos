@@ -15,7 +15,7 @@ public class Agenda {
         System.out.println("Contacto añadido con éxito.");
     }
 	
-	private void eliminarContacto(String nombre) {
+	public void eliminarContacto(String nombre) {
 
 		for (int i = 0; i < listaContactos.size(); i++) {
 			
@@ -26,7 +26,7 @@ public class Agenda {
 		}
 	}
 
-	private String buscarContactos(String nombre) {
+	public String buscarContactos(String nombre) {
 
 		boolean existe = false;
 
