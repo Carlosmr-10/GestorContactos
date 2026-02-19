@@ -1,18 +1,19 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Agenda {
 
-	private Contactos contacto;
-	
-	public Agenda(Contactos contacto) {
+	private ArrayList<Contactos> listaContactos;
 
-		this.contacto = contacto;
-	}
+    public Agenda() {
+        this.listaContactos = new ArrayList<>();
+    }	
 	
-	private void agregarContacto(Contactos c) {
-
-		
-	}
+    public void agregarContacto(Contactos c) {
+        listaContactos.add(c);
+        System.out.println("Contacto añadido con éxito.");
+    }
 	
 	private void eliminarContacto(String nombre) {
 
@@ -26,7 +27,10 @@ public class Agenda {
 		return existe;
 	}
 	
-	private void listarContactos() {
-		
-	}
+	public void listarContactos() {
+        System.out.println("\n LISTA DE CONTACTOS ");
+        for (Contactos c : listaContactos) {
+            System.out.println(c);
+        }
+    }
 }
